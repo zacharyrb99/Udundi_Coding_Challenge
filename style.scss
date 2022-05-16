@@ -1,0 +1,166 @@
+$primaryColor: rgb(86, 20, 11);
+$primaryColorTransparent: rgba(86, 20, 11, 0.4);
+
+.main {
+    display: flex;
+
+    .left {
+        height: 100vh;
+        flex: 0.25;
+        background-color: $primaryColor;
+    }
+
+    .right {
+        height: 100vh;
+        flex: 0.75;
+        background-image: url("/assets/Coding-Challenge-Image.png");
+        background-size: cover;
+    }
+
+    .details-section {
+        .explore {
+            position: absolute;
+            font-size: 14rem;
+            font-family: 'Playfair Display', serif;
+            color: white;
+            left: 8.5%;
+            bottom: 15%;
+            animation: 1s ease-in slideInFromLeft;
+        }
+
+        .details {
+            position: absolute;
+            color: white;
+            left: 11%;
+            bottom: 12%;
+            font-size: 1.25rem;
+            animation: 1s ease-in slideInFromLeft;
+
+            .details-plus {
+                margin-right: 1rem;
+                transition: ease-in 0.3s;
+            }
+            
+            .details-text {
+                vertical-align: middle;
+            }
+        }
+
+        .details:hover {
+            cursor: pointer;
+
+            .details-plus {
+                transform: scale(0.85);
+                transition: ease-in 0.3s;
+            }
+        }
+
+        .socials {
+            .facebook {
+                position: absolute;
+                width: 3.5rem;
+                right: 1rem;
+                bottom: 7rem;
+                transition: ease-in 0.3s;
+            }
+
+            .facebook:hover {
+                transform: scale(0.85);
+                transition: ease-in 0.3s;
+            }
+
+            .instagram {
+                position: absolute;
+                width: 3.5rem;
+                right: 1rem;
+                bottom: 3rem;
+                transition: ease-in 0.3s;
+            }
+
+            .instagram:hover {
+                transform: scale(0.85);
+                transition: ease-in 0.3s;
+            }
+        }
+    }
+
+    .modal {
+        position: fixed;
+        z-index: 1;
+        left: 10%;
+        top: 15%;
+        width: 35vw;
+        height: 75vh;
+        overflow: auto;
+        background-color: white;
+        animation: 1s ease-in expandModal;
+
+        .modal-content {
+            border: none;
+            padding: 2rem;
+
+            .modal-title {
+                color: $primaryColor;
+                font-family: 'Playfair Display', serif;
+                font-weight: 300;
+
+                .close {
+                    color: $primaryColor;
+                    float: right;
+                    font-size: 3rem;
+                    font-weight: bold;
+                    transition: 0.3s ease-in;
+                }
+
+                .close:hover {
+                    cursor: pointer;
+                    transform: scale(0.85);
+                }
+            }
+
+            .modal-seperator {
+                height: 2px;
+                width: 45%;
+                background-image: linear-gradient(to right, $primaryColor, white);
+                margin-bottom: 1.5rem;
+            }
+
+            .modal-btn {
+                color: white;
+                font-weight: lighter;
+                border: none;
+                width: 40%;
+                padding: 10px;
+                margin-top: 10px;
+                background-image: linear-gradient(to right, $primaryColor, $primaryColorTransparent);
+                transition: 0.3s ease-in;
+            }
+
+            .modal-btn:hover {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes expandModal {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

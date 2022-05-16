@@ -1,0 +1,210 @@
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .left {
+  height: 100vh;
+  -webkit-box-flex: 0.25;
+      -ms-flex: 0.25;
+          flex: 0.25;
+  background-color: #56140b;
+}
+
+.main .right {
+  height: 100vh;
+  -webkit-box-flex: 0.75;
+      -ms-flex: 0.75;
+          flex: 0.75;
+  background-image: url("/assets/Coding-Challenge-Image.png");
+  background-size: cover;
+}
+
+.main .details-section .explore {
+  position: absolute;
+  font-size: 14rem;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  left: 8.5%;
+  bottom: 15%;
+  -webkit-animation: 1s ease-in slideInFromLeft;
+          animation: 1s ease-in slideInFromLeft;
+}
+
+.main .details-section .details {
+  position: absolute;
+  color: white;
+  left: 11%;
+  bottom: 12%;
+  font-size: 1.25rem;
+  -webkit-animation: 1s ease-in slideInFromLeft;
+          animation: 1s ease-in slideInFromLeft;
+}
+
+.main .details-section .details .details-plus {
+  margin-right: 1rem;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .details-section .details .details-text {
+  vertical-align: middle;
+}
+
+.main .details-section .details:hover {
+  cursor: pointer;
+}
+
+.main .details-section .details:hover .details-plus {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .details-section .socials .facebook {
+  position: absolute;
+  width: 3.5rem;
+  right: 1rem;
+  bottom: 7rem;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .details-section .socials .facebook:hover {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .details-section .socials .instagram {
+  position: absolute;
+  width: 3.5rem;
+  right: 1rem;
+  bottom: 3rem;
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .details-section .socials .instagram:hover {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
+}
+
+.main .modal {
+  position: fixed;
+  z-index: 1;
+  left: 10%;
+  top: 15%;
+  width: 35vw;
+  height: 75vh;
+  overflow: auto;
+  background-color: white;
+  -webkit-animation: 1s ease-in expandModal;
+          animation: 1s ease-in expandModal;
+}
+
+.main .modal .modal-content {
+  border: none;
+  padding: 2rem;
+}
+
+.main .modal .modal-content .modal-title {
+  color: #56140b;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+}
+
+.main .modal .modal-content .modal-title .close {
+  color: #56140b;
+  float: right;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.main .modal .modal-content .modal-title .close:hover {
+  cursor: pointer;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.main .modal .modal-content .modal-seperator {
+  height: 2px;
+  width: 45%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#56140b), to(white));
+  background-image: linear-gradient(to right, #56140b, white);
+  margin-bottom: 1.5rem;
+}
+
+.main .modal .modal-content .modal-btn {
+  color: white;
+  font-weight: lighter;
+  border: none;
+  width: 40%;
+  padding: 10px;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#56140b), to(rgba(86, 20, 11, 0.4)));
+  background-image: linear-gradient(to right, #56140b, rgba(86, 20, 11, 0.4));
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.main .modal .modal-content .modal-btn:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+@-webkit-keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes expandModal {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes expandModal {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */
