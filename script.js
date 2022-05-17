@@ -4,11 +4,11 @@ let $closeBtn = $("#close");
 let $details = $("#details");
 
 $modalBtn.click(() => {
-    $modal.show();
-    $details.hide();
+    $modal.show(1000);
+    $details.hide(1000);
 });
 
 $closeBtn.click(() => {
-    $modal.hide();
-    $details.show();
+    $modal.hide(1000);
+    $details.show(1000);
 });
