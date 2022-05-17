@@ -33,11 +33,18 @@
           animation: 1s ease-in slideInFromLeft;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .main .details-section .explore {
     overflow: hidden;
     font-size: 8rem;
     bottom: 25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .main .details-section .explore {
+    overflow: hidden;
+    font-size: 6rem;
   }
 }
 

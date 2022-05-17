@@ -26,10 +26,15 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
             bottom: 15%;
             animation: 1s ease-in slideInFromLeft;
 
-            @media (max-width: 1000px) {
+            @media screen and (max-width: 1000px) {
                 overflow: hidden;
                 font-size: 8rem;
                 bottom: 25%;
+            }
+
+            @media screen and (max-width: 600px) {
+                overflow: hidden;
+                font-size: 6rem;
             }
         }
 
