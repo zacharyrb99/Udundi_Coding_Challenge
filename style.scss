@@ -3,18 +3,17 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
 
 .main {
     display: flex;
+    background-image: url("/assets/Coding-Challenge-Image.png");
+    background-size: cover;
 
     .left {
         height: 100vh;
         flex: 0.25;
         background-color: $primaryColor;
-    }
 
-    .right {
-        height: 100vh;
-        flex: 0.75;
-        background-image: url("/assets/Coding-Challenge-Image.png");
-        background-size: cover;
+        @media (max-width: 1000px) {
+            flex: 0;
+        }
     }
 
     .details-section {
@@ -26,6 +25,12 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
             left: 8.5%;
             bottom: 15%;
             animation: 1s ease-in slideInFromLeft;
+
+            @media (max-width: 1000px) {
+                overflow: hidden;
+                font-size: 8rem;
+                bottom: 25%;
+            }
         }
 
         .details {
@@ -36,9 +41,19 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
             font-size: 1.25rem;
             animation: 1s ease-in slideInFromLeft;
 
+            @media (max-width: 1000px) {
+                font-size: 1rem;
+                bottom: 20%;
+            }
+
             .details-plus {
                 margin-right: 1rem;
                 transition: ease-in 0.3s;
+
+                @media (max-width: 1000px) {
+                    margin-right: 0.75rem;
+                    width: 2rem;
+                }
             }
             
             .details-text {
@@ -62,6 +77,10 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
                 right: 1rem;
                 bottom: 7rem;
                 transition: ease-in 0.3s;
+
+                @media (max-width: 1000px) {
+                    width: 2.75rem;
+                }
             }
 
             .facebook:hover {
@@ -75,6 +94,11 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
                 right: 1rem;
                 bottom: 3rem;
                 transition: ease-in 0.3s;
+
+                @media (max-width: 1000px) {
+                    width: 2.75rem;
+                    bottom: 3.75rem;
+                }
             }
 
             .instagram:hover {
@@ -93,6 +117,11 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
         height: 75vh;
         overflow: auto;
         background-color: white;
+
+        @media (max-width: 1000px) {
+            width: 75vw;
+            height: 65vh;
+        }
 
         .modal-content {
             border: none;
@@ -151,15 +180,5 @@ $primaryColorTransparent: rgba(86, 20, 11, 0.4);
     100% {
         opacity: 1;
         transform: translateX(0)
-    }
-}
-
-@keyframes expandModal {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
     }
 }

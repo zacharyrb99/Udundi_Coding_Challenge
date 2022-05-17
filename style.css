@@ -2,6 +2,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-image: url("/assets/Coding-Challenge-Image.png");
+  background-size: cover;
 }
 
 .main .left {
@@ -12,13 +14,12 @@
   background-color: #56140b;
 }
 
-.main .right {
-  height: 100vh;
-  -webkit-box-flex: 0.75;
-      -ms-flex: 0.75;
-          flex: 0.75;
-  background-image: url("/assets/Coding-Challenge-Image.png");
-  background-size: cover;
+@media (max-width: 1000px) {
+  .main .left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
 }
 
 .main .details-section .explore {
@@ -32,6 +33,14 @@
           animation: 1s ease-in slideInFromLeft;
 }
 
+@media (max-width: 1000px) {
+  .main .details-section .explore {
+    overflow: hidden;
+    font-size: 8rem;
+    bottom: 25%;
+  }
+}
+
 .main .details-section .details {
   position: absolute;
   color: white;
@@ -42,10 +51,24 @@
           animation: 1s ease-in slideInFromLeft;
 }
 
+@media (max-width: 1000px) {
+  .main .details-section .details {
+    font-size: 1rem;
+    bottom: 20%;
+  }
+}
+
 .main .details-section .details .details-plus {
   margin-right: 1rem;
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .main .details-section .details .details-plus {
+    margin-right: 0.75rem;
+    width: 2rem;
+  }
 }
 
 .main .details-section .details .details-text {
@@ -72,6 +95,12 @@
   transition: ease-in 0.3s;
 }
 
+@media (max-width: 1000px) {
+  .main .details-section .socials .facebook {
+    width: 2.75rem;
+  }
+}
+
 .main .details-section .socials .facebook:hover {
   -webkit-transform: scale(0.85);
           transform: scale(0.85);
@@ -86,6 +115,13 @@
   bottom: 3rem;
   -webkit-transition: ease-in 0.3s;
   transition: ease-in 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .main .details-section .socials .instagram {
+    width: 2.75rem;
+    bottom: 3.75rem;
+  }
 }
 
 .main .details-section .socials .instagram:hover {
@@ -104,8 +140,13 @@
   height: 75vh;
   overflow: auto;
   background-color: white;
-  -webkit-animation: 1s ease-in expandModal;
-          animation: 1s ease-in expandModal;
+}
+
+@media (max-width: 1000px) {
+  .main .modal {
+    width: 75vw;
+    height: 65vh;
+  }
 }
 
 .main .modal .modal-content {
@@ -183,28 +224,6 @@
     opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes expandModal {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes expandModal {
-  0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 /*# sourceMappingURL=style.css.map */

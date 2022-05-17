@@ -12,3 +12,10 @@ $closeBtn.click(() => {
     $modal.hide(1000);
     $details.show(1000);
 });
+
+$(document).click(e => {
+    if (e.target.closest("#modal") || e.target.closest("#details-btn")) return;
+    
+    $modal.hide(1000);
+    $details.show(1000);  
+});
